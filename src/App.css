@@ -1,0 +1,79 @@
+.loginBox {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px;
+}
+.login {
+  margin-left: 10px;
+  cursor: pointer;
+}
+.imgBox {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+.imgBox img {
+  cursor: pointer;
+}
+.menuList {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+.menuList li {
+  margin: 10px;
+  cursor: pointer;
+}
+.menuList li:hover {
+  text-decoration: underline;
+}
+.searchBox {
+  display: flex;
+  justify-content: flex-end;
+}
+.searchBorder {
+  border-bottom: 1px solid black;
+}
+.searchBorder input {
+  margin: 5px;
+  border: none;
+}
+.searchBorder input:focus {
+  outline: none;
+}
+.cardImgSize {
+  max-width: 306px;
+  max-height: 459px;
+}
+.productCard {
+  background-color: white;
+}
+.productCard:hover {
+  transform: scale(1.1);
+}
+.subText {
+  font-size: 0.8rem;
+}
+.loginForm {
+  width: 600px;
+}
+.centerForm {
+  display: flex;
+  justify-content: center;
+}
+.addBtn {
+  width: 100%;
+}
+.pdPrice {
+  font-weight: 500;
+  font-size: 1.2em;
+}
+.pdTitle {
+  font-weight: 500;
+  font-size: 1.4em;
+}
+.pdImg {
+  display: flex;
+  justify-content: flex-end;
+}
