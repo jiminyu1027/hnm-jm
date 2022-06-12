@@ -2,6 +2,8 @@
 
 리액트를 이용한 쇼핑몰 웹사이트.
 
+![제목을 입력해주세요_-004](https://user-images.githubusercontent.com/92264611/173238787-31a1a0a0-65eb-458c-8976-f665b869251f.png)
+
 - Demo : [https://jm-hnm.netlify.app/](https://jm-hnm.netlify.app/)
 
 ## 개발 목표
