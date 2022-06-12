@@ -11,13 +11,14 @@ const ProductAll = () => {
   const dispatch = useDispatch();
 
   const getProductList = () => {
-    let searchQuery = query.get("q") || "";
+    let searchQuery = query.get("q") || ""; //검색을 안했을수도 있으니까 q가 없다면 빈값을 넣어준다
     dispatch(productAction.getProducts(searchQuery));
   };
 
   useEffect(() => {
     getProductList();
   }, [query]);
+  //query를 주시하고 있다가 query가 바뀌면 (q=검색한값)을 url에 추가하여 getProductList() 를 재호출
 
   return (
     <div>

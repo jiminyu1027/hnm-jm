@@ -23,7 +23,7 @@ const Navbar = () => {
 
   const goTologin = () => {
     navigate("/login");
-  };
+  }; //login버튼을 눌렀을경우
 
   const goToHome = () => {
     navigate("/");

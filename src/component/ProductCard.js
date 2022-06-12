@@ -6,11 +6,11 @@ const ProductCard = ({ item }) => {
   const navigate = useNavigate();
   const showProductDetail = () => {
     navigate(`/products/${item.id}`);
-  };
+  }; //item의 id값으로 상품디테일을 볼 수 있다.
 
   return (
     <Card className="productCard" onClick={showProductDetail}>
-      <Card.Img src={item?.img}/>
+      <Card.Img src={item?.img} />
       <Card.Body>
         <div className="subText">
           {item?.choice == true ? "concious choice" : <div>&nbsp;</div>}

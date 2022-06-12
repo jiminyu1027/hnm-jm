@@ -11,7 +11,7 @@ const Login = () => {
   const [pw, setPw] = useState("");
 
   const clickLogin = (event) => {
-    event.preventDefault();
+    event.preventDefault(); //버튼을 클릭했을때 새로고침방지
     dispatch(authenticateAction.login(id, pw));
     navigate("/");
   };
