@@ -42,15 +42,15 @@
 .searchBorder input:focus {
   outline: none;
 }
-.cardImgSize {
-  max-width: 306px;
-  max-height: 459px;
-}
 .productCard {
-  background-color: white;
+  border: none !important;
 }
 .productCard:hover {
   transform: scale(1.1);
+  z-index: 1;
+}
+.card-img{
+  border-radius: 0px !important;
 }
 .subText {
   font-size: 0.8rem;
@@ -64,6 +64,7 @@
 }
 .addBtn {
   width: 100%;
+  margin-bottom: 15px;
 }
 .pdPrice {
   font-weight: 500;
@@ -76,4 +77,17 @@
 .pdImg {
   display: flex;
   justify-content: flex-end;
+}
+.card-body {
+  padding: 0px !important;
+}
+
+@media screen and (max-width: 768px){
+  .pdImg {
+    display: flex;
+    justify-content: center;
+  }
+  .searchBox{
+    display: none;
+  }
 }

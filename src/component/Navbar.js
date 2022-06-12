@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faSearch, faBars } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
-const Navbar = ({ authenticate }) => {
+const Navbar = () => {
   const navigate = useNavigate();
+  const authenticate = useSelector((state) => state.auth.authenticate);
+  console.log(authenticate);
+
   const menuList = [
     "여성",
     "Divided",
@@ -16,16 +20,20 @@ const Navbar = ({ authenticate }) => {
     "Sale",
     "지속가능성",
   ];
+
   const goTologin = () => {
     navigate("/login");
   };
+
   const goToHome = () => {
     navigate("/");
-  };
+  }; //로고를 누르면 상품 전체페이지로 돌아간다
+
   const search = (event) => {
     if (event.key == "Enter") {
+      //엔터키를 눌렀을경우만 검색가능
       let keyword = event.target.value;
-      navigate(`/?q=${keyword}`);
+      navigate(`/?q=${keyword}`); //주소창에 keyword를 붙여서 검색될수 있도록
     }
   };
 
@@ -34,7 +42,9 @@ const Navbar = ({ authenticate }) => {
       <div>
         <div className="loginBox" onClick={goTologin}>
           <FontAwesomeIcon icon={faUser} />
-          <div className="login">로그인</div>
+          <div className="login">
+            {authenticate == false ? "로그인" : "로그아웃"}
+          </div>
         </div>
       </div>
       <div className="imgBox">
